@@ -23,7 +23,8 @@ import org.dbflute.jetty.JettyBoot;
 public class HarborBoot { // #change_it_first
 
     public static void main(String[] args) { // e.g. java -Dlasta.env=production -jar harbor.war
-        new JettyBoot(8090, "/harbor").asDevelopment(isDevelopment()).bootAwait();
+        // rare port (basically no-boot at this project), thank you police
+        new JettyBoot(39715, "/harbor").asDevelopment(isDevelopment()).bootAwait();
     }
 
     private static boolean isDevelopment() {
